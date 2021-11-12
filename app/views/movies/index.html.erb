@@ -1,6 +1,9 @@
-<h2>Movies</h2>
-<ul>
+<div class="movies">
   <% @movies.each do |movie| %>
-  <li><%= link_to movie.title, movie_path(movie) %></li>
+    <%= link_to movie_path(movie), class: "text-decoration-none" do%>
+      <div class="movie-card" style="background-image: url(https://image.tmdb.org/t/p/original/<%= movie.poster_url %>)">
+        <p class="movie-link"><%= movie.title %></p>
+      </div>
+    <% end %>
   <% end %>
-</ul>
+</div>

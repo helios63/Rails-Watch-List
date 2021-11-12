@@ -11,14 +11,15 @@
   </head>
 
   <body>
+    <div class="container">
     <h1><%= link_to "Watch List", movies_path %></h1>
 
     <nav>
       <%= link_to "Movies", movies_path %>
       <%= link_to "Lists", lists_path %>
-      <%= link_to "Bookmarks", bookmarks_path %>
     </nav>
 
     <%= yield %>
+    </div>
   </body>
 </html>

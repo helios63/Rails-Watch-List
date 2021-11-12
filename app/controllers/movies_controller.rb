@@ -5,6 +5,8 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    @bookmark = Bookmark.new
+    @bookmarks = Bookmark.where(movie_id: @movie.id)
   end
 
   private

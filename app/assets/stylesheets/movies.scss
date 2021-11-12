@@ -1,3 +1,56 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 16px;
+  margin-top: 1em;
+}
+
+.movie-card {
+  background-size: cover;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(146, 105, 105, 0.2);
+  transition: transform 0.4s ease-in-out;
+  &:hover{
+    transform: translateY(-5px)
+  }
+}
+
+.movie-link {
+    color: aliceblue;
+    font-size: 24px;
+    text-align: center ;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    margin-left: 0.5em;
+}
+
+a.movie-link:hover {
+  text-decoration: none;
+}
+
+.movie-body{
+  margin-top: 1em;
+}
+
+.overview-body {
+  img{
+    object-fit: cover;
+    width: 100%;
+    max-height: 350px;
+    margin-bottom: 0.5em;
+  }
+}
+
+.rating {
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border-radius: 50px;
+  border: 2px solid rgba(0,0,0,0.4);
+}

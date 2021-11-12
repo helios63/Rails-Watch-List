@@ -1,5 +1,5 @@
 <h2>Lists > <%= @list.name %></h2>
 
-<p>Movie</p>
-<p>Movie</p>
-<p>Movie</p>
+<% @bookmarks.each do |bookmark| %>
+  <%= bookmark.comment %>  | <%= link_to "Delete", bookmark_path(bookmark["id"]), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>

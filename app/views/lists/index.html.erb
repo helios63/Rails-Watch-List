@@ -1,12 +1,12 @@
-<h2>Lists</h2>
+<div class="rating">
+  <%= simple_form_for (@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+
 <ul>
   <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
+  <li><%= link_to list.name, list_path(list) %> | <%= link_to "Delete", list_path(list["id"]), method: :delete, data: { confirm: "Are you sure?" } %></li>
   <% end %>
 </ul>
-
-<%= simple_form_for (@list) do |f| %>
-  <%= f.label :name %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>

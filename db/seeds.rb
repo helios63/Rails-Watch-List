@@ -20,7 +20,7 @@ results = JSON.parse(buffer.read)
 results = results['results']
 # puts results
 
-results.first(20).each do |result|
+results.first(50).each do |result|
   Movie.create(
     title: result['original_title'],
     overview: result['overview'],
